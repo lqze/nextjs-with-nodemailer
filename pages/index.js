@@ -21,7 +21,7 @@ export default function Home(props) {
       "email": document.getElementById('emailFormEmail').value,
     }
 
-    // Send our data in JSON using the standard ES5 Fetch API
+    // Send our data in JSON using the Fetch API
     fetch('/api/submit', {
       method: 'POST',
       headers: {
@@ -56,7 +56,8 @@ export default function Home(props) {
         </h2>
         <p>
           A simple example showcasing a form submission to a serverless API utilising <i><a href="https://nodemailer.com/about/">nodemailer</a></i>.<br/>
-          The example uses an <b><a href="https://ethereal.email/">Ethereal Mail</a></b> set-up for example purposes.
+          The example uses an <b><a href="https://ethereal.email/">Ethereal Mail</a></b> set-up for example purposes.<br />
+          The example is using code directly from <i>nodemailer's</i> usage guide.
         </p>
         <div className={styles.inner}>
           { formLoading 
@@ -72,6 +73,7 @@ export default function Home(props) {
           }
         </div>
       </main>
+      <footer className={styles.footer}><p><a href="https://github.com/lqze/nextjs-with-nodemailer">View source on Github</a></p></footer>
     </div>
   )
 }
@@ -87,7 +89,7 @@ function FormComponent(props) {
     <form id="emailForm" className={styles} method='POST' onSubmit={e => submissionHandler(e)}>
       <label>Name</label>
       <input id="emailFormName" name='name' type='text'/>
-      <label>Email</label>
+      <label>Email *(required)</label>
       <input id="emailFormEmail" required name='email' type='email'/>
       <input className="button" value="Submit" type='submit' />
     </form>
