@@ -3,7 +3,9 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 ## Features
 
 ✅ No custom server!
+
 ⚡ Next.js 9.5+
+
 📬 Nodemailer STMP
 
 View the demo here: https://nextjs-with-nodemailer.vercel.app/
