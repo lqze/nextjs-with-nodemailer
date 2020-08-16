@@ -3,7 +3,11 @@
  * internal API for 'server-less' functions. We export an async function.
  * 
  * We import the nodemailer package to handle SMTP transactional mail.
- * You could pass in your desired environe
+ * 
+ * In a production environment, you could create a .env.production
+ * to hold your secure details, e.g.,
+ * HOST, AUTH_USER, AUTH_PASS
+ * 
  */
 import nodemailer from 'nodemailer'
 
